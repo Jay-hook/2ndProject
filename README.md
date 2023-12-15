@@ -5,12 +5,21 @@
 
 # 서론
 ## 기획배경
+중소기업은 현금유동성이 중요하다
 ## 선행연구
 ## 차별점
+상장중소기업과 비상장외감중소기업의 부실예측비교 연구
 ## 부실정의
+- 조건 1 : 3년 연속 이자보생배율 1미만
+- 조건 2 : 3년 연속 영업현금흐름 음수
+- 조건 3 : 감사의견 거절 혹은 부적절
 ## 기업수명주기 (현금흐름관련) 정의
+- 도입기 : 영업현금흐름 (-), 투자현금흐름 (-), 재무현금흐름 (+)
+- 성장기 : 영업현금흐름 (+), 투자현금흐름 (-), 재무현금흐름 (+)
+- 성숙기 : 영업현금흐름 (+), 투자현금흐름 (-), 재무현금흐름 (-)
+- 쇠퇴기 : 영업현금흐름 (-), 투자현금흐름 (+), 재무현금흐름 (±)  
 ## 연구대상은 상장 중소기업과 비상장 외갑 중소기업
-- 중소기업의 범위는?
+- 한국상장협의회 참조
 
 # 본론 Workflow
 ## 1_데이터 수집 및 전처리
@@ -42,13 +51,14 @@
 PCA(Oversmapling)?
 
 ## 2_Feature Selection
-### 2_1. filter : t-test, correlation, VIF
+### 2_1. filter : t-test(p-value 0.05)
 ### 2_2. scaling : minmax, standard
-### 2_3. wrapper : forward, backward, stepwise
-### 2_4. embedded : LASSO
+### 2_3. wrapper : backward
+### 2_4. embedded : LASSO(데이터섹 별 상이)
 
 ## 3_Modeling
 Logistic regression, Suport Vector Machine, RandomForest, Boosting, Bagging, LightGBM, XGboost, adaboost
 ## 4_Robustic 강건성평가
-
+winsorizing과 Resampling 전 원본데이터
 # 결론 Insight
+발표자료 참고
